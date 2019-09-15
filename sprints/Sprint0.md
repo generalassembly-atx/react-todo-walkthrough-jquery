@@ -3,11 +3,28 @@
 Create the React app. 
 
 ```bash
+$ npm install -g create-react-app
 $ create-react-app my-react-todo
 $ cd my-react-todo
+$ npm run start
 ```
 
 Navigate to [`localhost:3000`](http://localhost:3000) to see the boilerplate `create-react-app` React application.
+
+### Step 0: REVERT!
+
+`creat-react-app` is cool, but it installs the latest version of React. That's good, right? Mostly. Sometimes, you'll need use a slightly older version because your other packages have not been upgraded to support later versions. This is exactly what is going to happen to us - React 16.1.1 doesn't support the version of `react-router` we want to use, so we'll need to use an older version of React. Open up your `package.json` and change your dependancies to read as follows:
+
+```js
+"dependencies": {
+    "jquery-ajax": "^2.1.4",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^3.0.0"
+},
+```
+
+Now, run `npm install` again. All better!
 
 ### Step 1: Hello World
 
@@ -47,3 +64,6 @@ export default App;
 3. Switch over to your browser to automatically see the updates.
 
 > The `create-react-app` command installs and sets up a lot of useful tools.  A tool called `webpack` manages automatic re-rendering files change!  
+
+
+[Next!](https://github.com/den-materials/react-todo-walkthrough-jquery/blob/master/sprints/Sprint1.md)

@@ -30,7 +30,7 @@ import React, {Component} from 'react'
 class TodosContainer extends Component {
   render(){
     return (
-      <div className='todosContainer'>
+      <div className='todos-container'>
         <h2>This is the todos container</h2>
       </div>
     )
@@ -46,7 +46,7 @@ export default TodosContainer
 // which file does this belong in?
 import TodosContainer from '../containers/TodosContainer'
 
-module.exports = (
+export default (
   <Route path='/' component={App}>
     <Route path='/todos' component={TodosContainer}/>
   </Route>
@@ -137,3 +137,6 @@ span.deleteButton, span.toggleButton {
 }
 
 ```
+> Note that you'll have to `import` these styles into your `index.js` file for your styles to show up.
+
+[Next!](https://github.com/den-materials/react-todo-walkthrough-jquery/blob/master/sprints/Sprint3.md)

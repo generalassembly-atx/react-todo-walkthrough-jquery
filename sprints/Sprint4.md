@@ -49,6 +49,7 @@ render(){
     )
   }
 ```
+> Don't forget to `import` your new component as well!
 
 3. Briefly try out the form on the `/todos` page.  Identify which part of your code set up the text inside the input box.  What happens if you submit the form?  What happens if you try to change the input?
 
@@ -169,10 +170,10 @@ createTodo(newBody) {
 }
 render(){
   return (
-    <div className="todosComponent">
+    <div className="todosContainer">
       <CreateTodoForm
         createTodo={this.createTodo.bind(this)} />
-      <Todos
+      <TodoList
         todos={this.state.todos} />
     </div>
   )
@@ -254,3 +255,5 @@ render(){
 ```
 
 The argument passed in at the `CreateTodoForm` level(child) was state from that component. And now it updates state at the `TodosContainer` level(parent).
+
+[Next!](https://github.com/den-materials/react-todo-walkthrough-jquery/blob/master/sprints/Sprint5.md)
